@@ -35,7 +35,7 @@ Connected Content will interpret any JSON-formatted results into a local variabl
 {
   "consolidated_weather": [
     {
-      "id": 5.8143475362693e+15,
+      "id": 5814347536269300,
       "weather_state_name": "Clear",
       "weather_state_abbr": "c",
       "wind_direction_compass": "WSW",
@@ -51,15 +51,15 @@ Connected Content will interpret any JSON-formatted results into a local variabl
       "visibility": 14.945530601288,
       "predictability": 68
     },
-    .
-    .
-    .
-    "title": "New York",
-    "location_type": "City",
-    "woeid": 2459115,
-    "latt_long": "40.71455,-74.007118",
-    "timezone": "US\/Eastern"
-  }
+    {
+      "title": "New York",
+      "location_type": "City",
+      "woeid": 2459115,
+      "latt_long": "40.71455,-74.007118",
+      "timezone": "US/Eastern"
+    }
+  ]
+}
 ```
 
 You can test whether or not it's raining by referencing `{{localweather.consolidated_weather[0].weather_state_name}}`, which if used on this object would return `Clear`. If you want to also personalize with the resulting location name, `{{localweather.title}}` returns `New York`.
